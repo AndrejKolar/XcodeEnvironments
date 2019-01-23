@@ -25,8 +25,8 @@ Access the `baseUrl` from code
 
 ```swift
 if let info = Bundle.main.infoDictionary, let baseUrl = info["BaseUrl"] as? String {
-            print(baseUrl)
-        }
+  print(baseUrl)
+}
 ```
 
 ## Options

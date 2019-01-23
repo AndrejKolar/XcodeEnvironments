@@ -4,10 +4,17 @@ We can setup different environments for development, staging and production usin
 
 1. Rename the existing configurations from `Debug` & `Release` to `Debug Dev` & `Release Dev`. These will be the debug configurations.
 2. Duplicate the debug configuration twice and create `Debug Stag` & `Debug Prod`. Do the same thing again for `Release Stag` & `Release Prod`.
+   ![Configurations](https://raw.githubusercontent.com/AndrejKolar/XcodeEnvironments/master/Screens/1.png)
 3. Add a User defined setting, called `BASE_URL`, and set the values for each configuration.
+   ![User defined setting](https://raw.githubusercontent.com/AndrejKolar/XcodeEnvironments/master/Screens/2.png)
 4. Open the Info.plist and add a key called `BaseUrl` with the value `$(BASE_URL)`. This will allow us to read the value of the user defined setting in the app code
+   ![Info.plist](https://raw.githubusercontent.com/AndrejKolar/XcodeEnvironments/master/Screens/3.png)
 5. Rename the current scheme from the app name to `Dev`, and create two new schemes `Stag` & `Prod`. Make sure all the schemes are Shared so they get commited to source control.
+   ![Rename schemes](https://raw.githubusercontent.com/AndrejKolar/XcodeEnvironments/master/Screens/5.png)
 6. Edit each scheme and set the correct Build Configuration for each step. Run, Test & Analyze should have the Debug configurations, Profile and Archive Release.
+   ![Dev scheme](https://raw.githubusercontent.com/AndrejKolar/XcodeEnvironments/master/Screens/6.png)
+   ![Stag scheme](https://raw.githubusercontent.com/AndrejKolar/XcodeEnvironments/master/Screens/7.png)
+   ![Prod scheme](https://raw.githubusercontent.com/AndrejKolar/XcodeEnvironments/master/Screens/8.png)
 7. After this is done we can read baseUrl value in the app code from the main bundle info dictionary.
 
 Example

@@ -9,7 +9,7 @@ Example project for setting up different environments in Xcode with configuratio
    ![Configurations](https://raw.githubusercontent.com/AndrejKolar/XcodeEnvironments/master/Screens/1.png)
 3. Add a User defined setting, called `BASE_URL`, and set the values for each configuration.
    ![User defined setting](https://raw.githubusercontent.com/AndrejKolar/XcodeEnvironments/master/Screens/2.png)
-4. Open the Info.plist and add a key called `BaseUrl` with the value `$(BASE_URL)`. This will allow us to read the value of the user defined setting in the app code
+4. Open the Info.plist and add a key called `BaseUrl` with the value `$(BASE_URL)`. This will allow us to read the value of the user defined setting from the app Bundle.
    ![Info.plist](https://raw.githubusercontent.com/AndrejKolar/XcodeEnvironments/master/Screens/3.png)
 5. Rename the current scheme from the app name to `Dev`, and create two new schemes `Stag` & `Prod`. Make sure all the schemes are Shared so they get commited to source control and are shared between all devs.
    ![Rename schemes](https://raw.githubusercontent.com/AndrejKolar/XcodeEnvironments/master/Screens/5.png)
